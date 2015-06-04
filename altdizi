@@ -1,0 +1,63 @@
+public class testing 
+{
+
+public static void main(String[] args) 
+{
+    ArrayList<Integer> sayi = new ArrayList<Integer>();
+    Scanner in = new Scanner(System.in);
+    Integer a =0;
+    Integer deger = 0;
+    Integer num = 0;
+
+    boolean loop = true;
+    //get sayi..
+    while(loop)
+
+    {
+        System.out.println("1-0'lardan olusan sayi serisi giriniz, A bitir");
+        Integer n = in.nextInt();
+        if(n.equals('A'))
+        {
+            break;
+        }
+        else
+        { 
+            sayi.add(n);         
+
+        }
+
+
+
+    }
+
+    boolean same = false;
+    int altdiziUzunlugı = 0;
+    Integer altinteger = null; 
+
+for (int i = 1; i < sayi.size(); i++)
+        { 
+            if(sayi.get(i).equals(sayi.get(i-1)))//her elemandan sonra karsılastırıyoruz aynı ise altdizi++ uzunlugunu artırıyor 
+                {
+                      same = true;
+                      altdiziUzunlugı ++;
+                }      
+            else(if same == true)
+                {
+                      altinteger = new Integer(altdiziUzunlugı );
+                      //alt dizinin integer deger ekler ve numbers.get(i-1) degeri getirilir
+                      same = false;
+                      altdiziUzunlugı = 0;
+                }        }
+liste taraması bitti
+(if same == true)
+{
+      altinteger = new Integer(altdiziUzunlugı );
+      //alt dizinin integer deger ekler ve numbers.get(i-1) degeri getirilir 
+      same = false;
+}
+
+}//hocam sınavda buna benzer yapmaya calısmıstım , tam olarak ne yazdıgım aklıma gelmedi saygılarımla.
+
+
+
+}
